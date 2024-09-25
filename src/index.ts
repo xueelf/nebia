@@ -142,5 +142,6 @@ export class Logger {
 function createLogger(init: LogConfig | Level = 'info'): Logger {
   return new Logger(init);
 }
+createLogger.Logger = Logger;
 
 module.exports = createLogger;
