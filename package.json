@@ -1,0 +1,34 @@
+{
+  "name": "nebia",
+  "version": "0.0.1",
+  "description": "A lightweight logger for Node.js",
+  "main": "dist/index.js",
+  "types": "dist/types/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "packageManager": "pnpm@9.11.0",
+  "scripts": {
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xueelf/nebia.git"
+  },
+  "keywords": [
+    "log",
+    "logger"
+  ],
+  "author": "Yuki <admin@yuki.sh>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/xueelf/nebia/issues"
+  },
+  "homepage": "https://github.com/xueelf/nebia#readme",
+  "devDependencies": {
+    "@types/node": "^20.16.7"
+  },
+  "peerDependencies": {
+    "typescript": "^5.5.4"
+  }
+}
