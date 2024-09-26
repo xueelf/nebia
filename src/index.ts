@@ -2,22 +2,22 @@ import { stderr } from 'node:process';
 import { format } from 'node:util';
 
 export enum LogColor {
-  Black = 30,
-  Red = 31,
-  Green = 32,
-  Yellow = 33,
-  Blue = 34,
-  Magenta = 35,
-  Cyan = 36,
-  White = 37,
-  BlackBg = 40,
-  RedBg = 41,
-  GreenBg = 42,
-  YellowBg = 43,
-  BlueBg = 44,
-  MagentaBg = 45,
-  CyanBg = 46,
-  WhiteBg = 47,
+  black = 30,
+  red = 31,
+  green = 32,
+  yellow = 33,
+  blue = 34,
+  magenta = 35,
+  cyan = 36,
+  white = 37,
+  bgBlack = 40,
+  bgRed = 41,
+  bgGreen = 42,
+  bgYellow = 43,
+  bgBlue = 44,
+  bgMagenta = 45,
+  bgCyan = 46,
+  bgWhite = 47,
 }
 export type Color = keyof typeof LogColor;
 
@@ -97,17 +97,17 @@ export class Logger {
   private setColor(text: string, level: Level) {
     switch (level) {
       case 'fatal':
-        return colorful(text, 'Magenta');
+        return colorful(text, 'magenta');
       case 'error':
-        return colorful(text, 'Red');
+        return colorful(text, 'red');
       case 'warn':
-        return colorful(text, 'Yellow');
+        return colorful(text, 'yellow');
       case 'info':
-        return colorful(text, 'Green');
+        return colorful(text, 'green');
       case 'debug':
-        return colorful(text, 'Cyan');
+        return colorful(text, 'cyan');
       case 'trace':
-        return colorful(text, 'Blue');
+        return colorful(text, 'blue');
     }
   }
 
