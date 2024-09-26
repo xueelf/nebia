@@ -139,9 +139,8 @@ export class Logger {
  * @param init - The initial configuration or log level.
  * @returns A new logger instance.
  */
-function createLogger(init: LogConfig | Level = 'info'): Logger {
+export function createLogger(init: LogConfig | Level = 'info'): Logger {
   return new Logger(init);
 }
-createLogger.Logger = Logger;
 
-module.exports = createLogger;
+export default createLogger();
