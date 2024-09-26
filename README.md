@@ -1,6 +1,6 @@
 # nebia
 
-Nebia is a lightweight logger for Node.js.
+Nebia is a lightweight logger for Node.js, with no dependencies and size of only 3kb.
 
 Read this in other languages: English | [简体中文](./README.zh.md)
 
@@ -66,9 +66,11 @@ enum LogLevel {
   trace,
 }
 
+type Level = keyof typeof LogLevel;
+
 interface LogConfig {
   // default 'info'
-  level: keyof typeof LogLevel;
+  level: Level;
   name: string;
 }
 ```

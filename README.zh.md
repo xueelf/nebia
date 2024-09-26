@@ -1,6 +1,6 @@
 # nebia
 
-Nebia 是一个轻量级的 Node.js 日志库。
+Nebia 是一个轻量级的 Node.js 日志库，没有任何依赖仅 3kb 大小。
 
 使用其他语言阅读：[English](./README.md) | 简体中文
 
@@ -66,9 +66,11 @@ enum LogLevel {
   trace,
 }
 
+type Level = keyof typeof LogLevel;
+
 interface LogConfig {
   // 默认 'info'
-  level: keyof typeof LogLevel;
+  level: Level;
   name: string;
 }
 ```

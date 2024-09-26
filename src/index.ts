@@ -1,7 +1,7 @@
 import { stderr } from 'node:process';
 import { format } from 'node:util';
 
-enum LogColor {
+export enum LogColor {
   Black = 30,
   Red = 31,
   Green = 32,
@@ -19,9 +19,9 @@ enum LogColor {
   CyanBg = 46,
   WhiteBg = 47,
 }
-type Color = keyof typeof LogColor;
+export type Color = keyof typeof LogColor;
 
-function colorful(text: string, ...colors: Color[]): string {
+export function colorful(text: string, ...colors: Color[]): string {
   const style: string = colors.map(color => LogColor[color]).join(';');
   return `\u001b[${style}m${text}\u001b[0m`;
 }
